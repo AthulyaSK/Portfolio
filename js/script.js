@@ -15,7 +15,6 @@ document.querySelectorAll('.toggle-details').forEach(button => {
 });
 
 // Project modal functionality
-// JS for modal
 const clickableItems = document.querySelectorAll('.project-clickable');
 const modal = document.getElementById('projectModal');
 const modalTitle = document.getElementById('modalTitle');
@@ -24,13 +23,12 @@ const modalLink = document.getElementById('modalLink');
 const closeModal = document.getElementById('closeModal');
 
 clickableItems.forEach(item => {
-  item.addEventListener('click', (e) => {
+  item.addEventListener('click', () => {
     modal.style.display = 'block';
     modalTitle.textContent = item.dataset.title;
     modalDesc.textContent = item.dataset.desc;
-
-    if(item.dataset.link) {
-      modalLink.style.display = 'block';
+    if (item.dataset.link) {
+      modalLink.style.display = 'inline-block';
       modalLink.href = item.dataset.link;
     } else {
       modalLink.style.display = 'none';
@@ -43,10 +41,8 @@ closeModal.addEventListener('click', () => {
 });
 
 window.addEventListener('click', e => {
-  if(e.target === modal) {
+  if (e.target === modal) {
     modal.style.display = 'none';
   }
 });
-
-
 
