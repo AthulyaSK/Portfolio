@@ -1,7 +1,8 @@
+/* Base styles */
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: #f9f9f9;
+  background-color: #f5f5f5;
   color: #333;
 }
 
@@ -12,20 +13,19 @@ body {
   top: 0;
   width: 250px;
   height: 100%;
-  background-color: #222;
-  color: #fff;
+  background-color: #fff;
+  color: #333;
+  border-right: 1px solid #ddd;
   padding-top: 20px;
   transition: transform 0.3s ease;
+  z-index: 1000;
 }
 
-.sidebar-header {
+.sidebar h2 {
   text-align: center;
-}
-
-.profile-pic {
-  width: 100px;
-  border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #444;
 }
 
 .sidebar-links {
@@ -41,7 +41,7 @@ body {
 
 .sidebar-links a {
   text-decoration: none;
-  color: #ccc;
+  color: #666;
   font-weight: 500;
   display: block;
   padding: 10px 0;
@@ -50,7 +50,8 @@ body {
 
 .sidebar-links a:hover,
 .sidebar-links a.active {
-  color: #009688;
+  color: #111;
+  font-weight: 600;
 }
 
 /* Hamburger button */
@@ -61,7 +62,7 @@ body {
   left: 20px;
   background: none;
   border: none;
-  color: #222;
+  color: #333;
   cursor: pointer;
   z-index: 2000;
   display: none;
@@ -73,37 +74,32 @@ body {
   padding: 60px;
 }
 
-.about-section h1 {
+/* Section Headings */
+h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 2em;
-  color: #111;
+  color: #222;
+  margin-bottom: 20px;
 }
 
-.about-section p {
-  max-width: 700px;
-  line-height: 1.6;
-}
-
+/* Skills */
 .skills {
   margin-top: 20px;
 }
 
 .skills span {
   display: inline-block;
-  background-color: #009688;
-  color: #fff;
+  background-color: #ccc;
+  color: #333;
   padding: 6px 12px;
   border-radius: 20px;
   margin: 4px;
   font-size: 14px;
 }
 
-.buttons {
-  margin-top: 25px;
-}
-
+/* Buttons */
 .btn {
-  background-color: #009688;
+  background-color: #999;
   color: #fff;
   padding: 10px 20px;
   border-radius: 6px;
@@ -113,91 +109,18 @@ body {
 }
 
 .btn:hover {
-  background-color: #00796b;
+  background-color: #666;
 }
 
 .btn.outline {
   background: none;
-  border: 2px solid #009688;
-  color: #009688;
+  border: 2px solid #999;
+  color: #333;
 }
 
 .btn.outline:hover {
-  background-color: #009688;
+  background-color: #333;
   color: #fff;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .sidebar {
-    transform: translateX(-100%);
-  }
-
-  .sidebar.active {
-    transform: translateX(0);
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .main-content {
-    margin-left: 0;
-    padding: 80px 20px;
-  }
-}
-/* Education Page Styles */
-.education-section h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2em;
-  color: #111;
-  margin-bottom: 30px;
-}
-
-.edu-card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  padding: 20px 25px;
-  margin-bottom: 25px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.edu-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-}
-
-.edu-card h2 {
-  color: #009688;
-  margin-bottom: 5px;
-}
-
-.edu-card h3 {
-  color: #444;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.edu-card .year {
-  float: right;
-  color: #777;
-  font-size: 0.9em;
-}
-
-.edu-card ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.edu-card ul li {
-  margin-bottom: 8px;
-}
-.gpa {
-  color: #555;
-  font-weight: 500;
-  margin-top: 4px;
-  margin-bottom: 8px;
 }
 
 /* Timeline Styling */
@@ -205,7 +128,7 @@ body {
   position: relative;
   margin: 40px 0;
   padding-left: 40px;
-  border-left: 3px solid #ddd;
+  border-left: 3px solid #ccc;
 }
 
 .timeline-item {
@@ -219,141 +142,3 @@ body {
   top: 5px;
   width: 15px;
   height: 15px;
-  background-color: #4CAF50;
-  border-radius: 50%;
-}
-
-.timeline-date {
-  font-size: 0.9em;
-  color: #999;
-  margin-bottom: 5px;
-}
-
-.timeline-content h3 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-.timeline-content a {
-  color: #333;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.timeline-content a:hover {
-  color: #4CAF50;
-}
-
-.timeline-content .role {
-  display: block;
-  font-size: 0.95em;
-  color: #666;
-  margin-top: 3px;
-}
-
-.toggle-details {
-  background: #4CAF50;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 5px;
-}
-
-.toggle-details:hover {
-  background: #43a047;
-}
-
-.details {
-  display: none;
-  margin-top: 10px;
-  padding-left: 20px;
-  line-height: 1.6;
-}
-
-.details.active {
-  display: block;
-}
-
-/* Contact Page */
-.contact-section {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.contact-section p {
-  margin-bottom: 20px;
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 40px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  margin-bottom: 5px;
-  font-weight: 600;
-  color: #333;
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #4CAF50;
-}
-
-.btn-submit {
-  background: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.btn-submit:hover {
-  background: #43a047;
-}
-
-.social-links {
-  text-align: center;
-}
-
-.social-links h3 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.social-links .icons a {
-  margin: 0 10px;
-  color: #4CAF50;
-  font-size: 1.6em;
-  transition: color 0.3s ease;
-}
-
-.social-links .icons a:hover {
-  color: #2e7d32;
-}
