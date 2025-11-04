@@ -200,3 +200,79 @@ body {
   margin-bottom: 8px;
 }
 
+/* Timeline Styling */
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 40px;
+  border-left: 3px solid #ddd;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+}
+
+.timeline-date {
+  font-size: 0.9em;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.timeline-content a {
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.timeline-content a:hover {
+  color: #4CAF50;
+}
+
+.timeline-content .role {
+  display: block;
+  font-size: 0.95em;
+  color: #666;
+  margin-top: 3px;
+}
+
+.toggle-details {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.toggle-details:hover {
+  background: #43a047;
+}
+
+.details {
+  display: none;
+  margin-top: 10px;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.details.active {
+  display: block;
+}
+
