@@ -1,1 +1,78 @@
-WIP
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Athulya Surendran</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans&display=swap" rel="stylesheet">
+  <script defer src="js/projects.js"></script>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <img src="assets/profile.jpg" alt="Athulya Surendran" class="profile-pic" />
+      <h2>Athulya Surendran</h2>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <header>
+      <span class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></span>
+      <h1>Projects</h1>
+    </header>
+
+    <section class="projects-section">
+      <div class="project-grid">
+        <!-- Project Card -->
+        <div class="project-card" data-description="Created a comprehensive optimization solution utilizing Excel Solver and Python Pyomo to minimize total costs, including manufacturing, shipping, and operating expenses, while ensuring demand fulfillment and adherence to warehouse constraints.">
+          <img src="assets/project-supplychain.jpg" alt="Supply Chain Optimization">
+          <h3>Supply Chain Optimization</h3>
+        </div>
+
+        <div class="project-card" data-description="Participated in Kaggle data science competition analyzing decline in home sales. Developed predictive models using 4 ML techniques (linear regression, lasso regression, random forest, and gradient boosting) in Python, comparing RMS to identify the best model.">
+          <img src="assets/project-houseprice.jpg" alt="ML House Price Prediction">
+          <h3>Machine Learning House Price Prediction</h3>
+        </div>
+
+        <div class="project-card" data-description="Analyzed COVID data in the USA from 2020-2022 to understand the distribution of total number of COVID cases by state with death count and created a Tableau dynamic dashboard to showcase insights.">
+          <img src="assets/project-covid.jpg" alt="US Covid Data Analysis">
+          <h3>US Covid Data Analysis</h3>
+        </div>
+
+        <div class="project-card" data-description="Analyzed Yelp data in SQL/Snowflake from 2005-2018 to understand inflationary trends in the US. Identified top 10 states with highest inflation, top 3 inflationary business categories, and top 5 businesses within the most inflationary category.">
+          <img src="assets/project-inflation.jpg" alt="Inflation Trend Analysis">
+          <h3>Inflation Trend Analysis</h3>
+        </div>
+
+        <div class="project-card" data-description="Built an automated cloud data pipeline storing data on Amazon S3, automating extracts and loading using Fivetran, loading raw data into BigQuery, transforming with DBT, and creating dashboards in Looker Studio. Enabled seamless data flow from storage to analysis.">
+          <img src="assets/project-cloud.jpg" alt="Cloud Computing Pipeline">
+          <h3>Cloud Computing Pipeline</h3>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal for Project Details -->
+  <div class="project-modal" id="projectModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+</body>
+</html>
+
