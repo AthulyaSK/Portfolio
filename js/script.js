@@ -15,21 +15,23 @@ document.querySelectorAll('.toggle-details').forEach(button => {
 });
 
 // Project modal functionality
-const projectCards = document.querySelectorAll('.project-card');
+// JS for modal
+const clickableItems = document.querySelectorAll('.project-clickable');
 const modal = document.getElementById('projectModal');
 const modalTitle = document.getElementById('modalTitle');
 const modalDesc = document.getElementById('modalDesc');
 const modalLink = document.getElementById('modalLink');
 const closeModal = document.getElementById('closeModal');
 
-projectCards.forEach(card => {
-  card.addEventListener('click', () => {
+clickableItems.forEach(item => {
+  item.addEventListener('click', (e) => {
     modal.style.display = 'block';
-    modalTitle.textContent = card.dataset.title;
-    modalDesc.textContent = card.dataset.desc;
-    if(card.dataset.link) {
+    modalTitle.textContent = item.dataset.title;
+    modalDesc.textContent = item.dataset.desc;
+
+    if(item.dataset.link) {
       modalLink.style.display = 'block';
-      modalLink.href = card.dataset.link;
+      modalLink.href = item.dataset.link;
     } else {
       modalLink.style.display = 'none';
     }
@@ -45,5 +47,6 @@ window.addEventListener('click', e => {
     modal.style.display = 'none';
   }
 });
+
 
 
