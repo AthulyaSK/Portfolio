@@ -54,3 +54,19 @@ window.addEventListener("keydown", e => {
   if (e.key === "Escape") modal.style.display = "none";
 });
 
+// Modal image viewer
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.querySelector(".modal .close");
+
+document.querySelectorAll('.img-card img').forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  });
+});
+
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+};
+
