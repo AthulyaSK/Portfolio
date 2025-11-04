@@ -521,3 +521,85 @@ body {
   margin-bottom: 15px;
   text-align: center;
 }
+
+/* ---------------------------------
+   ACCOLADES PAGE STYLING
+---------------------------------- */
+.accolades-section {
+  padding: 40px;
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+}
+
+.accolades-section h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.accolades-section h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 1.5rem;
+  border-left: 5px solid #0077b6;
+  padding-left: 10px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+.quote {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.cert-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+.cert-card img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.cert-card p {
+  font-weight: 600;
+  color: #333;
+}
