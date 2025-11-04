@@ -5,13 +5,13 @@ menuToggle.addEventListener('click', () => {
   sidebar.classList.toggle('active');
 });
 
-// Toggle highlights
-const toggleButtons = document.querySelectorAll('.toggle-details');
-toggleButtons.forEach(button => {
+// Toggle highlights for timeline
+document.querySelectorAll('.toggle-details').forEach(button => {
   button.addEventListener('click', () => {
     const details = button.nextElementSibling;
     details.classList.toggle('active');
     button.textContent = details.classList.contains('active') ? 'Hide Highlights' : 'View Highlights';
   });
 });
+
 
