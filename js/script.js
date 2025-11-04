@@ -70,10 +70,16 @@ const modalImg = document.getElementById("modalImage");
 const closeBtn = document.querySelector(".modal .close");
 
 if (imageModal) {
-  document.querySelectorAll('.img-card img').forEach(img => {
-    img.addEventListener('click', () => {
-      imageModal.style.display = "block";
-      modalImg.src = img.src;
+  // Make the entire testimonial and cert card clickable
+  const clickableCards = document.querySelectorAll('.img-card, .cert-card');
+  
+  clickableCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('img');
+      if (img) {
+        imageModal.style.display = "block";
+        modalImg.src = img.src;
+      }
     });
   });
 
