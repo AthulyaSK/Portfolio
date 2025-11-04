@@ -209,12 +209,14 @@ h1, h2, h3 {
 
 .timeline-dot {
   position: absolute;
-  left: -10px;
-  top: 5px;
-  width: 15px;
-  height: 15px;
-  background-color: #999;
+  left: -9px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background-color: #999; /* grey dot */
   border-radius: 50%;
+  z-index: 10;
 }
 
 .timeline-date {
