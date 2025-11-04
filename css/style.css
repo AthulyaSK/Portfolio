@@ -69,7 +69,7 @@ body {
 
 /* --- Main Content --- */
 .main-content {
-  margin-left: 280px; /* Offset for sidebar */
+  margin-left: 280px;
   padding: 40px;
   width: calc(100% - 280px);
   min-height: 100vh;
@@ -82,33 +82,239 @@ body {
   color: #111;
 }
 
-/* --- Buttons --- */
-.btn,
-.btn.outline {
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+/* --- Core Skills --- */
+.skills-section {
+  margin-bottom: 25px;
 }
 
-.btn {
+.skills-section h2 {
+  margin-bottom: 10px;
+}
+
+.skills-section p span {
+  background: #e3e3e3;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 4px;
+  display: inline-block;
+}
+
+/* --- Timeline (Education & Experience) --- */
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 30px;
+  border-left: 3px solid #333;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: #333;
+  border-radius: 50%;
+}
+
+.timeline-item h3 {
+  color: #111;
+}
+
+.timeline-item p {
+  margin-top: 5px;
+  color: #555;
+}
+
+.toggle-details {
+  margin-top: 10px;
   background: #1b1f24;
   color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.btn:hover {
+.details {
+  display: none;
+  margin-top: 10px;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.details.active {
+  display: block;
+}
+
+/* --- Education Cards --- */
+.edu-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.edu-card h3 {
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.edu-card p {
+  color: #555;
+}
+
+/* --- Project Grid --- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  padding: 15px;
+  text-align: center;
+  color: #111;
+}
+
+/* --- Modal --- */
+.project-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-btn {
+  display: inline-block;
+  background: #1b1f24;
+  color: white;
+  padding: 8px 14px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.modal-btn:hover {
   background: #333;
 }
 
-.btn.outline {
-  border: 2px solid #1b1f24;
-  color: #1b1f24;
+/* --- Contact Form --- */
+.contact-form {
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-.btn.outline:hover {
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.contact-form button {
   background: #1b1f24;
   color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background: #333;
+}
+
+/* --- Hobbies Gallery --- */
+.hobbies-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.hobby-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.hobby-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.hobby-card h3 {
+  padding: 10px;
+  color: #111;
 }
 
 /* --- Responsive Sidebar --- */
