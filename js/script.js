@@ -14,19 +14,8 @@ document.querySelectorAll('.toggle-details').forEach(button => {
   });
 });
 
-// Project modal functionality
-
-// Sidebar toggle
-const menuToggle = document.getElementById("menuToggle");
-const sidebar = document.querySelector(".sidebar");
-
-if (menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    sidebar.classList.toggle("active");
-  });
-}
-
 // Modal functionality for project details
+// Modal Logic for Project Details
 const projectClickables = document.querySelectorAll(".project-clickable");
 const modal = document.getElementById("projectModal");
 const modalTitle = document.getElementById("modalTitle");
@@ -36,31 +25,32 @@ const closeModal = document.getElementById("closeModal");
 
 projectClickables.forEach(item => {
   item.addEventListener("click", () => {
-    const title = item.dataset.title;
-    const desc = item.dataset.desc;
-    const link = item.dataset.link;
+    const title = item.getAttribute("data-title");
+    const desc = item.getAttribute("data-desc");
+    const link = item.getAttribute("data-link");
 
-    modal.style.display = "block";
     modalTitle.textContent = title;
     modalDesc.textContent = desc;
-
     if (link) {
       modalLink.style.display = "inline-block";
       modalLink.href = link;
     } else {
       modalLink.style.display = "none";
     }
+    modal.style.display = "block";
   });
 });
 
+// Close modal on clicking X or outside content
 closeModal.addEventListener("click", () => {
   modal.style.display = "none";
 });
-
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
+window.addEventListener("click", e => {
+  if (e.target === modal) modal.style.display = "none";
 });
 
+// Optional: Close modal on pressing Escape key
+window.addEventListener("keydown", e => {
+  if (e.key === "Escape") modal.style.display = "none";
+});
 
